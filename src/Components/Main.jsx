@@ -8,7 +8,7 @@ const Main = () => {
     const movie = movies[Math.floor(Math.random() * movies.length)]
 
     useEffect( () => {
-        axios.get(requests.requestMovie).then((response) => {
+        axios.get(requests.requestTopRated).then((response) => {
           setMovies(response.data)
         })
     },[])
