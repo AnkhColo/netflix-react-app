@@ -24,8 +24,18 @@ export function AuthContexProvider({children}){
         return signOut(auth)
     }
 
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        });
+        return () => {
+            unsubscribe();
+        }
+    })
+
+
     return(
-        <AuthContex.Provider value={{signUp,user}}>
+        <AuthContex.Provider value={{signUp, LogIn, LogOut, user}}>
             ({children})
         </AuthContex.Provider>
     )
