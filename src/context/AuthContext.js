@@ -35,12 +35,12 @@ export function AuthContexProvider({children}){
 
 
     return(
-        <AuthContex.Provider value={{signUp, LogIn, LogOut, user}}>
+        <AuthContext.Provider value={{signUp, LogIn, LogOut, user}}>
             ({children})
-        </AuthContex.Provider>
+        </AuthContext.Provider>
     )
 }
 
-export function userAuth(){
+export function UserAuth(){
     return useContext(AuthContext)
 }
