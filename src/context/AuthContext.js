@@ -6,7 +6,7 @@ import {
     signOut, 
     onAuthStateChanged } from "firebase/auth";
 
-const AuthContext = createContext();
+const AuthContext = createContext()
 
 export function AuthContexProvider({children}){
 
