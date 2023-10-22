@@ -22,7 +22,7 @@ const Row = ({title, fetchURL, rowID}) => {
     }
     
   return (
-    <div>
+    <>
       <h2 className='text-white md:text-xl p-9 font-bold'>{title}</h2>
       <div className='relative flex items-center group'>
         <MdChevronLeft 
@@ -39,7 +39,7 @@ const Row = ({title, fetchURL, rowID}) => {
         onClick={slideRight}
         className='bg-white right-0 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block' size={40}/>
       </div>
-    </div>
+    </>
   )
 }
 
