@@ -15,7 +15,7 @@ const Signup = () => {
           navigate('/')
        } catch (error) {
           console.log(error)
-       }
+       };
   }
 
   return (

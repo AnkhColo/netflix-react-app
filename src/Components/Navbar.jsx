@@ -3,13 +3,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from '../context/AuthContext'
 
 const Navbar = () => {
-    const {user, email} = UserAuth()
+    const {user, LogOut} = UserAuth();
     const navigate = useNavigate()
-    //console.log(user.email)
+    //console.log(user)
 
     const handleLogout = async () => {
         try{
-            await logOut();
+            await LogOut();
             navigate('/');
         } catch (error) {
             console.log(error);
@@ -30,9 +30,10 @@ const Navbar = () => {
             </Link>
 
             <button 
-            onClick ={handleLogout}
+            onClick={handleLogout}
             className="bg-red-600 px-6 py-2 rounded cursor-pointer text-white">
-                Logout</button>
+                Logout
+            </button>
         </div>
         ) : (
             <div>
@@ -46,6 +47,7 @@ const Navbar = () => {
             </Link>
         </div>
         )}
+
      </div>
     )
 }
