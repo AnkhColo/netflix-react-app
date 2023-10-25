@@ -41,7 +41,8 @@ const SavedShows = () => {
 
     <>
             <h2 className='text-white font-bold md:text-xl p-4'>My Shows</h2>
-      <div className='relative flex items-center group py-[35%]'>
+
+      <div className='relative flex items-center group py-[12%]'>
         <MdChevronLeft 
         onClick={slideLeft}
         className='bg-white left-0 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block' size={40}/>
